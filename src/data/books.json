@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Cien años de soledad",
+    "author": "Gabriel García Márquez",
+    "price": 15,
+    "description": "Una obra clásica de la literatura latinoamericana.",
+    "image": "/images/l1.webp"
+  },
+  {
+    "id": 2,
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 12,
+    "description": "Una novela distópica sobre el control social.",
+    "image": "/images/l2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Cuentos de la selva",
+    "author": "Oracio Quiroga",
+    "price": 9,
+    "description": "Relatos fascinantes ambientados en la selva misionera.",
+    "image": "/images/l3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Psicología de las masas",
+    "author": "Miguel Segura",
+    "price": 13,
+    "description": "Un análisis profundo del comportamiento colectivo.",
+    "image": "/images/l4.webp"
+  },
+  {
+    "id": 5,
+    "title": "Amor en los tiempos del cólera",
+    "author": "Gabriel García Márquez",
+    "price": 8,
+    "description": "Una historia de amor que trasciende el tiempo.",
+    "image": "/images/l5.webp"
+  }
+]

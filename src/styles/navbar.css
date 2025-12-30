@@ -1,0 +1,57 @@
+.navbar {
+  width: 100%;
+  background-color: #f4f6f9;
+  padding: 50px 50;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 20px;
+}
+
+.navbar__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar__link:hover {
+  text-decoration: underline;
+}
+/* Carrito */
+.navbar__cart {
+  position: relative;
+}
+
+.navbar__cart-link {
+  color: white;
+  position: relative;
+}
+
+/* Badge rojo */
+.navbar__cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+
+  background-color: rgb(249, 243, 243);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

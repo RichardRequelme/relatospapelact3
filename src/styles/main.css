@@ -1,0 +1,75 @@
+@import "./layout.css";
+@import "./navbar.css";
+@import "./buttons.css";
+@import "./cart.css";
+@import "./landing.css";
+@import "./header.css";
+@import "./footer.css";
+
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.book-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.book-card__author {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+
+.checkout {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.checkout__title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkout__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.checkout__table th,
+.checkout__table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.checkout__table th {
+  background-color: #f5f5f5;
+}
+
+.checkout__summary {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 24px;
+}

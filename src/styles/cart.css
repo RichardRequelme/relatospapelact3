@@ -1,0 +1,118 @@
+.cart {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.cart__title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cart__empty {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+}
+
+/* 📊 TABLA */
+.cart__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.cart__table th,
+.cart__table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart__table th {
+  background-color: #f5f5f5;
+}
+
+/* 💰 RESUMEN */
+.cart__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.cart__total {
+  font-size: 1.2rem;
+}
+
+
+
+.book-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.book-card__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.book-card__image__detail {
+  width: 15%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.book-card__title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.book-card__author {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.book-card__price {
+  font-weight: bold;
+  color: #2c7be5;
+  margin: 10px 0;
+}
+
+
+.book-card__link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background-color: #2c7be5;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.book-card__link:hover {
+  background-color: #1a5bb8;
+}

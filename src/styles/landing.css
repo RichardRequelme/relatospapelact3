@@ -1,0 +1,15 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.landing__title {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.landing__title {
+  color: #4A90E2;
+}
