@@ -1,12 +1,12 @@
-export const CartItem = ({ book, onRemove }) => {
+export const CartItem = ({ book, index, onRemove }) => {
   return (
-    <tr className="cart__row">
+    <tr>
       <td>{book.title}</td>
       <td>${book.price}</td>
       <td>
         <button
           className="button button--danger"
-          onClick={() => onRemove(book.id)}
+          onClick={() => onRemove(index)}
         >
           Eliminar
         </button>
@@ -14,3 +14,4 @@ export const CartItem = ({ book, onRemove }) => {
     </tr>
   );
 };
+

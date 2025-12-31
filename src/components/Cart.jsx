@@ -2,8 +2,6 @@ import { CartItem } from "./CartItem";
 import { ProceedToCheckoutButton } from "./ProceedToCheckoutButton";
 
 export const Cart = ({ cart, removeFromCart }) => {
-
-  
   const total = cart.reduce((sum, book) => sum + book.price, 0);
 
   return (
@@ -24,10 +22,11 @@ export const Cart = ({ cart, removeFromCart }) => {
               </tr>
             </thead>
             <tbody>
-              {cart.map((book) => (
+              {cart.map((book, index) => (
                 <CartItem
-                  key={book.id}
+                  key={index}
                   book={book}
+                  index={index}
                   onRemove={removeFromCart}
                 />
               ))}

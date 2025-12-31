@@ -13,25 +13,6 @@
   gap: 20px;
 }
 
-.book-card {
-  background-color: white;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.book-card__title {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.book-card__author {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-
-
 .checkout {
   max-width: 700px;
   margin: 0 auto;

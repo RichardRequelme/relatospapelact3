@@ -22,7 +22,7 @@
   text-align: center;
 }
 
-/* 📊 TABLA */
+/* tabla*/
 .cart__table {
   width: 100%;
   border-collapse: collapse;
@@ -40,7 +40,7 @@
   background-color: #f5f5f5;
 }
 
-/* 💰 RESUMEN */
+/*resumen */
 .cart__summary {
   display: flex;
   justify-content: space-between;
@@ -88,6 +88,7 @@
   font-size: 1.1rem;
   font-weight: bold;
   margin: 8px 0;
+  margin-bottom: 5px;
 }
 
 .book-card__author {

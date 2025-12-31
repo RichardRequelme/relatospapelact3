@@ -20,9 +20,10 @@ const App = () => {
     setCart([...cart, book]);
   };
 
-  const removeFromCart = (id) => {
-    setCart(cart.filter((book) => book.id !== id));
-  };
+  const removeFromCart = (indexToRemove) => {
+  setCart(cart.filter((_, index) => index !== indexToRemove));
+};
+
 
   const clearCart = () => {
     setCart([]);

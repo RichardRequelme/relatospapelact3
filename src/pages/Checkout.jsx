@@ -29,8 +29,8 @@ export default function Checkout({ cart, clearCart }) {
               </tr>
             </thead>
             <tbody>
-              {cart.map((book) => (
-                <tr key={book.id}>
+              {cart.map((book,index) => (
+                <tr key={index}>
                   <td>{book.title}</td>
                   <td>${book.price}</td>
                 </tr>
