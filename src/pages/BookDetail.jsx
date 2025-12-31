@@ -5,17 +5,30 @@ import { AddToCartButton } from "../components/AddToCartButton";
 export default function BookDetail({ addToCart }) {
   const { id } = useParams();
   const book = books.find((b) => b.id === Number(id));
+
   if (!book) return <p>Libro no encontrado</p>;
+
+  const handleAddToCart = () => {
+    addToCart(book);
+    alert("Añadido al carrito. Revise su carrito de compras");
+  };
 
   return (
     <div className="book-card">
       <h2>{book.title}</h2>
-      <img src={book.image} alt={book.title} className="book-card__image__detail" />
+
+      <img
+        src={book.image}
+        alt={book.title}
+        className="book-card__image__detail"
+      />
+
       <p>Autor: {book.author}</p>
       <p>Descripción: {book.description}</p>
       <p>Precio: ${book.price}</p>
 
-      <AddToCartButton book={book} onAdd={addToCart} />
+      <AddToCartButton onAdd={handleAddToCart} />
     </div>
   );
 }
+

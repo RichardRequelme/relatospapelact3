@@ -1,8 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
+
 export default function Checkout({ cart, clearCart }) {
+  const navigate = useNavigate(); 
 
   const handleCheckout = () => {
     alert("Pedido realizado con éxito");
     clearCart();
+    navigate("/home");
   };
 
   const total = cart.reduce((sum, book) => sum + book.price, 0);
