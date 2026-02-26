@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
-
 export default function Checkout({ cart, clearCart }) {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleCheckout = () => {
     alert("Pedido realizado con éxito");
@@ -29,7 +28,7 @@ export default function Checkout({ cart, clearCart }) {
               </tr>
             </thead>
             <tbody>
-              {cart.map((book,index) => (
+              {cart.map((book, index) => (
                 <tr key={index}>
                   <td>{book.title}</td>
                   <td>${book.price}</td>
@@ -45,11 +44,7 @@ export default function Checkout({ cart, clearCart }) {
             </span>
           </div>
 
-          
-          <button
-            className="button button--primary"
-            onClick={handleCheckout}
-          >
+          <button className="button button--primary" onClick={checkout}>
             Finalizar compra
           </button>
         </>
@@ -58,3 +53,36 @@ export default function Checkout({ cart, clearCart }) {
   );
 }
 
+const checkout = async () => {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const requestBody = {
+    items: cart.map((item) => ({
+      bookId: item.id,
+      price: item.price,
+    })),
+  };
+
+  try {
+    const response = await fetch("http://localhost:8083/api/payments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    if (!response.ok) {
+      throw new Error("Error en la compra");
+    }
+
+    const data = await response.json();
+
+    alert("Compra realizada correctamente. ID: " + data.purchaseId);
+
+    localStorage.removeItem("cart"); // limpiar carrito
+  } catch (error) {
+    console.error(error);
+    alert("Error procesando la compra");
+  }
+};
