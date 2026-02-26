@@ -44,7 +44,7 @@ export default function Checkout({ cart, clearCart }) {
             </span>
           </div>
 
-          <button className="button button--primary" onClick={checkout}>
+          <button className="button button--primary" onClick={handleCheckout}>
             Finalizar compra
           </button>
         </>
@@ -53,9 +53,7 @@ export default function Checkout({ cart, clearCart }) {
   );
 }
 
-const checkout = async () => {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+const handleCheckout = async () => {
   const requestBody = {
     items: cart.map((item) => ({
       bookId: item.id,
@@ -64,13 +62,16 @@ const checkout = async () => {
   };
 
   try {
-    const response = await fetch("http://localhost:8083/api/payments", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    });
+    const response = await fetch(
+      "/api/payments",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Error en la compra");
@@ -80,7 +81,9 @@ const checkout = async () => {
 
     alert("Compra realizada correctamente. ID: " + data.purchaseId);
 
-    localStorage.removeItem("cart"); // limpiar carrito
+    clearCart(); // 👈 usar prop
+    navigate("/home");
+
   } catch (error) {
     console.error(error);
     alert("Error procesando la compra");
