@@ -10,7 +10,7 @@ export default function Home() {
 
   // 🔹 Cargar todos los libros al iniciar
   useEffect(() => {
-    fetch("http://52.91.201.191:8083/api/books")
+    fetch("/api/books")
       .then((res) => res.json())
       .then((data) => setBooks(data))
       .catch((err) => console.error(err));
@@ -19,12 +19,12 @@ export default function Home() {
   // 🔹 Buscar por título
   useEffect(() => {
     if (search.trim() === "") {
-      fetch("http://52.91.201.191:8083/api/books/all")
+      fetch("/api/books/all")
         .then((res) => res.json())
         .then((data) => setBooks(data));
     } else {
       fetch(
-        `http://52.91.201.191:8083/api/books/search/title?title=${search}`
+        `/api/books/search/title?title=${search}`
       )
         .then((res) => res.json())
         .then((data) => setBooks(data));

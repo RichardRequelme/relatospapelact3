@@ -8,7 +8,7 @@ export default function BookDetail({ addToCart }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://52.91.201.191:8083/api/books/search/${id}`)
+    fetch(`/api/books/search/${id}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Libro no encontrado");
